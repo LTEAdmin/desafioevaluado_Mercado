@@ -10,7 +10,7 @@ const productos = [
   {id: 3, name: "lechuga", price: 1190, unit: 45 },
   {id: 4, name: "tomate", price: 1590, unit: 25 },
   {id: 5, name: "papas", price: 1990, unit: 10 },  
-    { id: 6, name: "pimenton", price: 790, unit: 30 } 
+  { id: 6, name: "pimenton", price: 790, unit: 30 } 
 ];
 
 
@@ -27,5 +27,10 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname + "/views"));
 app.engine("hbs", exphbs.engine({defaultLayout: "main",})
 );
+
+//Creacion ruta principal
+app.get('/', (req, res) => {
+    res.render("home",(productos));
+  });
 
 app.listen(port, () => console.log(`Example app listening on http://localhost:${port}!`));
