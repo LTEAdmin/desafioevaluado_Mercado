@@ -33,7 +33,7 @@ app.engine("hbs", exphbs.engine({
 }));
 
 //Creacion ruta principal
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render("home",(productos));
   });
 
