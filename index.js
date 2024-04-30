@@ -4,6 +4,14 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+const productos = [
+  {id: 1, name: "banana", price: 780, unit: 30 },
+  {id: 2, name: "cebollas", price: 950, unit: 10 },
+  {id: 3, name: "lechuga", price: 1190, unit: 45 },
+  {id: 4, name: "tomate", price: 1590, unit: 25 },
+  {id: 5, name: "papas", price: 1990, unit: 10 },  
+    { id: 6, name: "pimenton", price: 790, unit: 30 } 
+];
 
 
 //configuracion ruta estatica
@@ -20,4 +28,4 @@ app.set("views", path.join(__dirname + "/views"));
 app.engine("hbs", exphbs.engine({defaultLayout: "main",})
 );
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on http://localhost:${port}!`));
