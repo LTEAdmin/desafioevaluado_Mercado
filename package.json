@@ -72,7 +72,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "dev": "node --whatch index.js"
+    "dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "Alejandra Flaño",

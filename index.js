@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+
+
 //configuracion ruta estatica
 app.use(express.static('assets'));
 app.use("/jquery", express.static("node_modules/jquery/dist"));
@@ -17,3 +19,5 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname + "/views"));
 app.engine("hbs", exphbs.engine({defaultLayout: "main",})
 );
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
