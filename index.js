@@ -25,11 +25,15 @@ app.use("/fontawesome", express.static("node_modules/@fortawesome/fontawesome-fr
 //Configuracion motor de plantilla
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname + "/views"));
-app.engine("hbs", exphbs.engine({defaultLayout: "main",})
-);
+app.engine("hbs", exphbs.engine({
+    defaultLayout: "main",
+    layoutsDir: path.join(app.get("views"), "layouts"),
+    partialsDir: path.join(app.get("views"), "partials"),
+    extname: ".hbs",
+}));
 
 //Creacion ruta principal
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
     res.render("home",(productos));
   });
 
