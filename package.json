@@ -72,7 +72,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --whatch index.js"
   },
   "keywords": [],
   "author": "Alejandra Flaño",
