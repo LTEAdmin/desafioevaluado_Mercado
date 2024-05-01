@@ -1,6 +1,15 @@
-<h4>productos</h4>
 {{#if productos }}
-    <h1>hay productos disponibles</h1>
+    {{#each productos}}
+        <div class="col mb-3">
+            <div class="card" >
+                <img src="img/{{this.name}}.png" class="card-img-top" alt="{{this.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">Precio :{{this.price}}<br>Unidades:{{this.unit}}</p>
+                    <a href="#" class="btn btn-primary">Agregar</a>
+                </div>
+            </div>   
+        </div>
+         
+    {{/each}}
 {{/if}}
-{{!-- 
- --}}
